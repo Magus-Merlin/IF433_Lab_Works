@@ -21,5 +21,9 @@ fun calculateDiscount(price: Int) : Int {
 }
 
 fun printReceipt(title: String, finalPrice: Int) {
+    val userNote: String? = null
+    val note = userNote?.length ?:  "Tidak ada catatan"
+
     println("Game = $title, Price after discount = $finalPrice")
+    println("Note : $note")
 }
