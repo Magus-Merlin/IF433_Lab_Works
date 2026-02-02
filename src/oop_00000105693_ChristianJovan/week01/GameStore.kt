@@ -6,6 +6,8 @@ fun main() {
 
     val discount = calculateDiscount(price)
     val finalPrice = price - discount
+
+    printReceipt(title = gameTitle, finalPrice = finalPrice)
 }
 
 fun calculateDiscount(price: Int) : Int {
@@ -18,3 +20,6 @@ fun calculateDiscount(price: Int) : Int {
     }
 }
 
+fun printReceipt(title: String, finalPrice: Int) {
+    println("Game = $title, Price after discount = $finalPrice")
+}
