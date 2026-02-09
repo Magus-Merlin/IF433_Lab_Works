@@ -40,4 +40,27 @@ fun main() {
     }else {
         println("Pilihan ngawur, pendaftaran batal!")
     }
+
+    print("Masukkan Judul Buku: ")
+    val bookTitle = scanner.nextLine()
+
+    print("Masukkan Nama Peminjam: ")
+    val borrower = scanner.nextLine()
+
+    print("Masukkan Durasi Peminjaman (Hari): ")
+    var loanDuration = scanner.nextInt()
+
+    scanner.nextLine()
+
+    if (loanDuration < 0){
+        loanDuration = 1
+    }
+
+    val loan = Loan(bookTitle, borrower, loanDuration)
+
+    println("--- DETAIL PEMINJAMAN ---")
+    println("Judul Buku : ${loan.bookTitle}")
+    println("Peminjaman : ${loan.borrower}")
+    println("Durasi Peminjaman : ${loan.loanDuration}")
+    println("Denda : ${loan.calculateFine()}")
 }
