@@ -9,6 +9,15 @@ fun main(){
     for (payment in listPayment){
         println("=== ${payment.accountName} ===")
         payment.processPayment(75000.0)
-        println("------------------------------")
+
+        when (payment){
+            is EWallet -> {
+                println("=== INITIATING TOP UP ===")
+                payment.topUp(50000.0)
+                println("=== PROCESSING PAYMENT ===")
+                payment.processPayment(75000.0)
+            }
+        }
+        println("----------------------------")
     }
 }
