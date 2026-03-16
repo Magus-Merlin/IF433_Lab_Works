@@ -21,4 +21,9 @@ fun main() {
     println(data1)
     println("Sama? ${data1 == data2}")
 
+    val data3 = data1.copy(age = 23)
+    println("\nHasil Copy: $data3")
+
+    val (userName, userAge) = data1
+    println("Destructured: $userName berumur $userAge")
 }
