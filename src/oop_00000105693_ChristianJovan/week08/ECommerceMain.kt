@@ -23,4 +23,5 @@ fun main(){
         }
     }
 
+    //Untuk pengeditan ApiParser.checkout, dimana saya edit apa saja yang ditampilkan, sudah dilakukan di commit-19.
 }
