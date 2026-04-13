@@ -62,4 +62,6 @@ fun main(){
     val statusLenghth = javaResponse!!.length
 
     println("Status dari Jawa: $javaResponse (Length: $statusLenghth)")
+
+    runMockUnitTests()
 }
