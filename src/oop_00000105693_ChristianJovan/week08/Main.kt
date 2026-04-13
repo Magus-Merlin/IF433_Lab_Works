@@ -8,7 +8,7 @@ fun main(){
 
     println("Tujuan pengiriman : $destination")
 
-    println("======== TEST LET BLOCK ========")
+    println("\n======== TEST LET BLOCK ========")
     val validOrder = Order(null,250000)
 
     val receipt = validOrder.totalPrice?.let {price ->
