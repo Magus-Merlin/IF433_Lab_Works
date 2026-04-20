@@ -31,8 +31,9 @@ fun main(){
         .toSet()
 
     println("=== CRYPTO TRADING DASHBOARD ===")
-    topPerformerString.forEach {println("$it")}
+    topPerformerString.forEach {println(it)}
 
-    worstPerformerString.forEach {println("$it")}
+    worstPerformerString.forEach {println(it)}
     println(uniquePairs)
+
 }
