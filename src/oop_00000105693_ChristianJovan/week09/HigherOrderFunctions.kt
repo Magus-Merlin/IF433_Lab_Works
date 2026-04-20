@@ -12,4 +12,5 @@ fun main(){
     val asStrings= multiplied.map {"Rp ${it}k"}
     println("Multiplied: $multiplied")
     println("Formatted : $asStrings")
+    //Maaf Kak, saya lupa commit yang ke 6 ("week09: implement map HOF for data transformation")
 }
