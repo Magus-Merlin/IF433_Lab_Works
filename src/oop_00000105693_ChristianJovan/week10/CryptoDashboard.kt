@@ -11,7 +11,7 @@ fun main(){
 
     println("Status: ${response.status}")
 
-    println("\n=== STATUS ===")
+    println("\n=== COIN DATA ===")
     response.data.forEach {
         println("${it.name} - ${it.balance}")
     }
@@ -21,5 +21,10 @@ fun main(){
     txRepo.add(Transaction("BTC01", 1000.0))
     txRepo.add(Transaction("ETH01", 1300.0))
     txRepo.add(Transaction("USDT01", 1050.0))
+
+    println("\n=== TRANSACTION ===")
+    txRepo.getAll().forEach {
+        println("${it.id} - ${it.amount}")
+    }
 
 }
