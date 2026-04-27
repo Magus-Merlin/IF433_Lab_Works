@@ -10,4 +10,5 @@ class WalletRepository<T>{
     fun getAll() : List<T> {
         return items
     }
+
 }
