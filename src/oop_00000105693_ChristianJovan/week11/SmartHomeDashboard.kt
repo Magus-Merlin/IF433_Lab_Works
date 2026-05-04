@@ -33,4 +33,13 @@ fun main() {
     }?.let{
         println(it.diagnose())
     }
+
+    with(homeDevices){
+        println("Total perangkat di rumah : ${this.size}")
+
+        this.forEach{
+            println("- ${it.name}")
+        }
+    }
+
 }
