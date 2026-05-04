@@ -7,14 +7,14 @@ fun main() {
         powerLoad = 12
     }.also {
         homeDevices.add(it)
-        println("${it.name} berhasil ditambahkan ke list!")
+        println("\n${it.name} berhasil ditambahkan ke list!")
     }
 
     val smartCamera = SmartDevice("Ezviz Outdoor", "Camera").apply{
         isOnline = true
         powerLoad = 5
     }.also{
-        println("(LOG) Kamera terhubung")
+        println("\n(LOG) Kamera terhubung")
         homeDevices.add(it)
     }
 
@@ -31,10 +31,11 @@ fun main() {
     val searchResult = homeDevices.find {
         it.category == "Camera"
     }?.let{
-        println(it.diagnose())
+        println("\n" + it.diagnose())
     }
 
     with(homeDevices){
+        println("\n=== RANGKUMAN ===")
         println("Total perangkat di rumah : ${this.size}")
 
         this.forEach{
@@ -44,4 +45,10 @@ fun main() {
 
     val totalPower = homeDevices.run {sumOf {it.powerLoad}}
     println("Total daya perangkat di rumah : $totalPower Watt")
+
+
+    println("\n=== DETAIL PERANGKAT ===")
+    homeDevices.forEach {
+        println(it.diagnose())
+    }
 }
