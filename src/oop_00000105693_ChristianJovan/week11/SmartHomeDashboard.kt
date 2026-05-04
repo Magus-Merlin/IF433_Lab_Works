@@ -18,4 +18,14 @@ fun main() {
         homeDevices.add(it)
     }
 
+    val acInverter  = run {
+        SmartDevice("Daikin Inverter (Kabel 3x2.5)", "HVAC", false, 900)
+    }
+    homeDevices.add(acInverter)
+
+    val autoFeeder = run{
+        SmartDevice("Picolo's Auto Feeder", "Pet Care", true, 10)
+    }
+    homeDevices.add(autoFeeder)
+
 }
