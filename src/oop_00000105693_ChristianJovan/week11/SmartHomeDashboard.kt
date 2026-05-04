@@ -28,4 +28,9 @@ fun main() {
     }
     homeDevices.add(autoFeeder)
 
+    val searchResult = homeDevices.find {
+        it.category == "Camera"
+    }?.let{
+        println(it.diagnose())
+    }
 }
