@@ -30,7 +30,7 @@ fun main(){
     } catch (e : Exception){
         println("Uh-oh, something went wrong!")
     } finally {
-        println("=== Siklus pengecekan dispenser pagi selesai ===")
+        println("[Siklus pengecekan dispenser pagi selesai]")
     }
 
     println("\n=== Jadwal 2 ===")
