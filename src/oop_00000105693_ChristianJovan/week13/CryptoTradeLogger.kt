@@ -9,10 +9,6 @@ fun TradeRecord.toCsv(): String {
 fun fromCsvTrade(line: String): TradeRecord? {
     val parts = line.split(",")
 
-    if (parts.size != 5) {
-        return null
-    }
-
     return try {
         TradeRecord(
             parts[0].toInt(),
@@ -21,8 +17,15 @@ fun fromCsvTrade(line: String): TradeRecord? {
             parts[3].toDouble(),
             parts[4].toDouble()
         )
-    }catch (e: Exception) {
-            null
+    }catch (e: NumberFormatException) {
+        println("(Log) Data korup diabaikan: $line")
+        return null
+    }catch (e: IndexOutOfBoundsException){
+        println("(Log) Data korup diabaikan: $line")
+        return null
+    }catch (e: Exception){
+        println("(Log) Data korup diabaikan: $line")
+        return null
     }
 
 }
